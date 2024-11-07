@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>API github</title>
+</head>
+<body>
+    <h1>GitHub API Search</h1>
+  
+  <div>
+    <input type="text" id="searchTerm" placeholder="Enter search term (min 3 chars)" />
+    <select id="searchType">
+      <option value="repositories">Repositories</option>
+      <option value="users">Users/Organizations</option>
+    </select>
+    <button id="searchButton">Cerca</button>
+  </div>
+
+  <div id="results"></div>
+
+  <div class="loader" id="loader"></div>
+
+  <p class="message" id="message"></p>
+
+  <script src="main.js"></script>
+</body>
+</html>

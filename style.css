@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+  /* Contenitore per le card con layout a griglia */
+  #results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    justify-items: center; 
+  }
+
+  /* Stile generale della card */
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px; 
+    padding: 15px;
+    text-align: left;
+    position: relative; 
+  }
+
+  /* Stile per l'immagine del profilo/repository */
+  .card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    padding-left: 70px; 
+  }
+
+  .card p {
+    font-size: 14px;
+    color: #555;
+    padding-left: 70px; 
+  }
+
+  .card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3498db;
+    padding-left: 70px; 
+  }
+
+  .card a:hover {
+    color: #2980b9;
+  }
+
+  
+  .loader {
+    display: none;
+    margin: 20px auto;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  
+  .message {
+    margin: 20px;
+    color: red;
+  }
+
+  
+  @media (max-width: 1200px) {
+    #results {
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  }
+
+  @media (max-width: 900px) {
+    #results {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+
+  @media (max-width: 600px) {
+    #results {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+  @media (max-width: 400px) {
+    #results {
+      grid-template-columns: 1fr; 
+    }
+  }
